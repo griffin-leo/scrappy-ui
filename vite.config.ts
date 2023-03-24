@@ -2,8 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-import UnoCSS from 'unocss/vite';
-import { presetAttributify, presetUno, presetIcons } from 'unocss';
+import UnoCSS from './config/unocss';
 
 function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir);
@@ -38,20 +37,7 @@ export default defineConfig({
       },
     ],
   },
-  plugins: [
-    vue(),
-    vueJsx(),
-    UnoCSS({
-      presets: [
-        presetAttributify({
-          /* preset options */
-        }),
-        presetUno(),
-        // ...custom presets
-        presetIcons(),
-      ],
-    }),
-  ],
+  plugins: [vue(), vueJsx(), UnoCSS()],
   // 添加库模式配置
   build: {
     rollupOptions,

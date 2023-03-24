@@ -1,6 +1,7 @@
 import { defineComponent, PropType, toRefs } from 'vue';
 import 'uno.css';
 
+export type ISize = 'small' | 'medium' | 'large';
 export type IColor =
   | 'black'
   | 'gray'
@@ -11,12 +12,21 @@ export type IColor =
   | 'indigo'
   | 'purple'
   | 'pink';
+
 export const props = {
+  size: {
+    type: String as PropType<ISize>,
+    default: 'medium',
+  },
   color: {
     type: String as PropType<IColor>,
     default: 'blue', // 设定默认颜色
   },
-};
+  icon: {
+    type: String,
+    default: '',
+  },
+} as const;
 
 export default defineComponent({
   name: 'Button',
@@ -35,6 +45,7 @@ export default defineComponent({
           hover:bg-${props.color}-700  
           border-none 
           cursor-pointer 
+          m-1 
         `}
       >
         {slots.default ? slots.default() : ''}

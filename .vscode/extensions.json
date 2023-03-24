@@ -3,6 +3,19 @@
     "Vue.volar",
     "Vue.vscode-typescript-vue-plugin",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "antfu.unocss",
+    "hollowtree.vue-snippets",
+    "wix.vscode-import-cost",
+    "christian-kohler.path-intellisense",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "pranaygp.vscode-css-peek",
+    "vincaslt.highlight-matching-tag",
+    "aaron-bond.better-comments",
+    "kamikillerto.vscode-colorize",
+    "kisstkondoros.vscode-gutter-preview",
+    "streetsidesoftware.code-spell-checker",
+    "xabikos.javascriptsnippets"
   ]
 }
